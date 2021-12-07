@@ -29,8 +29,7 @@ def uus_aken():
     img1=PhotoImage(file=texts[0])
     tabs.add(tab1,text=texts[0])#,image=img1)
     can1=Canvas(tab1,height=200,width=300,bg="red")
-    can1.create_image(0,0,image=img1)
-
+    can1.create_image(0,0,image=img1,anchor=NW)
     can1.pack()
     #image=can1.create_image(0,0,image=img1)
     tab2=Frame(tabs)
