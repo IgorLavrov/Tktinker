@@ -25,14 +25,18 @@ def uus_aken():
     tabs=ttk.Notebook(uusaken)
     texts=["pilt1.png","pilt2.png","pilt3.png","pilt4.png","pilt5.png"]
 
-
     tab1= Frame(tabs)
     img1=PhotoImage(file=texts[0])
+    tabs.add(tab1,text=texts[0])#,image=img1)
+    can1=Canvas(tab1,height=200,width=300,bg="red")
+    can1.create_image(0,0,image=img1)
+
+    can1.pack()
+    #image=can1.create_image(0,0,image=img1)
     tab2=Frame(tabs)
     tab3=Frame(tabs)
     tab4=Frame(tabs)
     tab5=Frame(tabs)
-    tabs.add(tab1,text=texts[0])
     tabs.add(tab2,text=texts[1])
     tabs.add(tab3,text=texts[2])
     tabs.add(tab4,text=texts[3])
